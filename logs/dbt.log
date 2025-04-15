@@ -1,0 +1,53 @@
+[0m22:23:11.782858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f4acb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10747f1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10747f670>]}
+
+
+============================== 22:23:11.787128 | 6532a17d-8610-491c-819f-065f28603bb6 ==============================
+[0m22:23:11.787128 [info ] [MainThread]: Running with dbt=1.8.0
+[0m22:23:11.787662 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/alex/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:23:48.046700 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/include/starter_project
+[0m22:23:48.058851 [info ] [MainThread]: 
+Your new dbt project "dbt_snowflake" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:23:48.059458 [info ] [MainThread]: Setting up your profile.
+[0m22:23:53.222600 [error] [MainThread]: Encountered an error:
+
+[0m22:23:53.228561 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/cli/main.py", line 469, in init
+    results = task.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:23:53.232996 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 41.50856, "process_user_time": 2.376068, "process_kernel_time": 1.029442, "process_mem_max_rss": "149684224", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m22:23:53.233794 [debug] [MainThread]: Command `dbt init` failed at 22:23:53.233653 after 41.51 seconds
+[0m22:23:53.234387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f4acb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e984af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e9857b0>]}
+[0m22:23:53.235009 [debug] [MainThread]: Flushing usage events
