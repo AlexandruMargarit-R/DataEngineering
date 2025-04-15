@@ -1,4 +1,4 @@
-[] create a snowflake account
+[x] create a snowflake account
 [] create a snowflake database
 [] create a snowflake warehouse
 [] create a snowflake schema
