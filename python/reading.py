@@ -1,25 +1,8 @@
 import pandas as pd
+from func.functions import top_each
 
 # link of the csv: https://www.kaggle.com/datasets/shivamb/netflix-shows
 df = pd.read_csv("../assets/netflix_titles.csv")
-
-
-# TODO: connect to snowflake
-# # connection_parameters = {
-#     "account": "your_account",
-#     "user": "your_user",
-#     "password": "your_password",
-#     "role": "your_role",
-#     "warehouse": "your_warehouse",
-#     "database": "your_database",
-#     "schema": "your_schema",
-# }
-
-
-def top_each(dataframe, filter_value):
-    filtered_df = dataframe[dataframe["type"] == filter_value]
-    filtered_df = filtered_df.drop(columns=["show_id", "cast", "country", "date_added"])
-    return filtered_df
 
 
 best_tv_shows = top_each(df, "TV Show")
