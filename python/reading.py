@@ -1,12 +1,10 @@
 import pandas as pd
-from snowflake.snowpark import Session
 
 # link of the csv: https://www.kaggle.com/datasets/shivamb/netflix-shows
-df = pd.read_csv("assets/netflix_titles.csv")
-# print(df.head())
-# top_movies = df[df["type"] == "Movie"]
-# print(top_movies)
-#
+df = pd.read_csv("../assets/netflix_titles.csv")
+
+
+# TODO: connect to snowflake
 # # connection_parameters = {
 #     "account": "your_account",
 #     "user": "your_user",
