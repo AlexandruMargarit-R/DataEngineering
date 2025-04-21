@@ -14,6 +14,11 @@ test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+seeds:
+  dbt_p:
+    +header: true # Keep CSV format options
+    +quote_columns: false # Keep CSV format options
+    +schema: seeds # Example: Setting schema for all seeds
 clean-targets: # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
