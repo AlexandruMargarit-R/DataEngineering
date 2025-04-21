@@ -1,0 +1,6 @@
+export snowflake_warehouse="dev_xs"
+export snowflake_role="DE"
+export snowflake_password="Parola1234!@#$"
+export snowflake_user="ALEXM"
+export snowflake_account="mh37388.eu-central-2.aws"
+
