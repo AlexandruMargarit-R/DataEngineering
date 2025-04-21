@@ -1,0 +1,15 @@
+# In profiles.yml
+dbt_p:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      user: "{{ env_var('snowflake_user', 'ALEXM') }}"
+      password: "{{ env_var('snowflake_password') }}"
+      account: "{{ env_var('snowflake_account') }}"
+      # authenticator: "password"
+      role: "{{ env_var('snowflake_role', 'de') }}"
+      warehouse: "{{ env_var('snowflake_warehouse') }}"
+      database: "DEV"
+      schema: "dbt_local"
+      threads: 1

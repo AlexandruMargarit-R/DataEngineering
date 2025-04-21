@@ -11,3 +11,4 @@ pyvenv.cfg
 pip-selfcheck.json
 snowflake.ini
 .envrc
+dbt.env
