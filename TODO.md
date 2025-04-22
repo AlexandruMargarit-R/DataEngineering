@@ -1,4 +1,4 @@
-[x] create a snowflake account (https://temp-mail.org/en/)
+[x] create a snowflake account
 [x] create a snowflake database
 [x] create a snowflake warehouse
 [x] create a snowflake table using dbt (run dbt init first)
