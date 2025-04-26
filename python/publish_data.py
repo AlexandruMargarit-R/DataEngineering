@@ -10,12 +10,10 @@ load_dotenv(dotenv_path)
 
 print(df.head())
 
-# connection = psycopg2.connect(
-#     database="postgres",
-#     user=os.getenv("postgress_user"),
-#     password=os.getenv("postgress_password"),
-#     host="localhost",
-#     port=5432,
-# )
-#
-#
+connection = psycopg2.connect(
+    database="postgres",
+    user=os.getenv("postgress_user"),
+    password=os.getenv("postgress_password"),
+    host="localhost",
+    port=5432,
+)
